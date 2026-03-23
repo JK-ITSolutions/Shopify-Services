@@ -1,41 +1,516 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Shopify app integration expert helping install and configure apps for subscriptions, reviews, upsells, and payments.">
-
-<meta name="keywords" content="Shopify apps setup, Shopify app integration, Shopify plugins, Shopify subscription apps, Shopify expert">
-
-<meta name="author" content="Your Name">
-
-<meta property="og:title" content="Shopify App Integration Expert">
-<meta property="og:description" content="Get your Shopify apps installed and configured professionally.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Shopify app integration expert helping install and configure apps for subscriptions, reviews, upsells, payments, and automation. Professional setup for maximum store performance.">
+<meta name="keywords" content="Shopify apps setup, Shopify app integration, Shopify plugins, Shopify subscription apps, Shopify expert, app configuration, Shopify reviews apps, upsell apps">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yourdomain.com/services/apps.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Shopify App Integration Expert | Setup & Configure Apps Professionally">
+<meta property="og:description" content="Get your Shopify apps installed and configured professionally. Expert setup for subscriptions, reviews, upsells, payments, and automation tools.">
 <meta property="og:type" content="website">
-<title>App Integration</title>
-<link rel="stylesheet" href="../css/style.css">
+<meta property="og:url" content="https://www.yourdomain.com/services/apps.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-apps.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify App Integration Expert">
+<meta name="twitter:description" content="Professional Shopify app installation and configuration services.">
+<title>Shopify App Integration Expert | Professional App Setup & Configuration</title>
+<!-- JSON-LD Structured Data for Advanced SEO & AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify App Integration Services",
+  "description": "Professional Shopify app installation, configuration, and optimization services for subscriptions, reviews, upsells, payments, and automation tools.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "App Integration",
+  "offers": {
+    "@type": "Offer",
+    "description": "Expert app setup and configuration for Shopify stores"
+  }
+}
+</script>
+<!-- FAQ Schema for common app-related questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Shopify apps do you specialize in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I specialize in all major Shopify apps including ReCharge (subscriptions), Judge.me/Yotpo (reviews), ReConvert (upsells), Klaviyo (email), Gorgias (support), and payment gateways like Stripe, PayPal, and Shop Pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does app integration take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most app integrations are completed within 1-3 business days, depending on complexity and customization requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will app integration affect my store's speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I optimize app loading and ensure minimal impact on store speed by selecting lightweight apps and configuring them properly."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER SECTION ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* ===== SERVICES GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+.service-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  text-align: center;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.service-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+/* ===== INCLUDES SECTION ===== */
+.includes-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.includes-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.includes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.include-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.include-item:hover {
+  background: #eef2ff;
+  transform: translateX(5px);
+}
+.include-icon {
+  font-size: 1.8rem;
+}
+.include-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+/* ===== BENEFITS SECTION ===== */
+.benefits-section {
+  background: linear-gradient(135deg, #0f2b3d 0%, #1e4a6e 100%);
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+.benefits-section h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.benefits-section p {
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.benefit-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1.2rem 1.5rem;
+  border-radius: 60px;
+  font-weight: 500;
+}
+/* ===== PROCESS SECTION ===== */
+.process-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.process-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1.2rem;
+}
+.step-number {
+  background: #2c7da0;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.step p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== BACK NAV ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .services-grid {
+    gap: 1rem;
+  }
+  .includes-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Shopify App Integration Expert | Setup & Configure Apps</h1>
+<header class="page-header">
+  <div class="container">
+    <h1>🔌 Shopify App Integration Expert | Setup & Configure Apps</h1>
+    <p>Professional app installation, configuration, and optimization for subscriptions, reviews, upsells, payments, and automation tools. Get your store running with the perfect tech stack.</p>
+  </div>
+</header>
 
-<h2>🔗 Shopify App Services</h2>
-<p>I help you install and configure Shopify apps for better functionality.</p>
+<main>
+  <div class="container">
+    <!-- Extended Services Section - Detailed app categories -->
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Subscription Apps</h3>
+        <p>ReCharge, Bold Subscriptions, Seal Subscriptions — complete setup with custom plans, billing cycles, and customer portals.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⭐</div>
+        <h3>Reviews & Ratings</h3>
+        <p>Judge.me, Yotpo, Okendo, Loox — install, customize widgets, import reviews, and optimize for social proof.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>Upsells & Cross-sells</h3>
+        <p>ReConvert, Zipify, Bold Upsell — post-purchase offers, cart upsells, and funnel optimization for higher AOV.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💳</div>
+        <h3>Payment Integrations</h3>
+        <p>Stripe, PayPal, Klarna, Afterpay, Shop Pay — seamless checkout setup with multi-currency support.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>Marketing & Email</h3>
+        <p>Klaviyo, Omnisend, Mailchimp — email flows, signup forms, and automation workflows for retention.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <h3>Support & Chat</h3>
+        <p>Gorgias, Zendesk, Tidio — live chat setup, ticket automation, and customer service optimization.</p>
+      </div>
+    </div>
 
-<h2>✅ Includes</h2>
-<ul>
-<li>App installation</li>
-<li>Subscription setup</li>
-<li>Reviews & upsells</li>
-<li>Payment integrations</li>
-</ul>
+    <!-- Includes Section - Extended with more details -->
+    <div class="includes-section">
+      <h2>✅ What's Included in My App Integration Service</h2>
+      <div class="includes-grid">
+        <div class="include-item">
+          <div class="include-icon">📲</div>
+          <span>App installation & configuration</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">🔄</div>
+          <span>Subscription plan setup</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">⭐</div>
+          <span>Reviews & ratings integration</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">💰</div>
+          <span>Upsell & cross-sell funnels</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">💳</div>
+          <span>Payment gateway setup</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">📧</div>
+          <span>Email automation flows</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">⚡</div>
+          <span>Performance optimization</span>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">🎨</div>
+          <span>Custom styling & branding</span>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Benefit</h2>
-<p>Save time and avoid technical issues with expert setup.</p>
+    <!-- Benefits Section - Extended -->
+    <div class="benefits-section">
+      <h2>💡 Why Hire a Professional for App Integration?</h2>
+      <p>Save time, avoid technical issues, and ensure your apps work perfectly together.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">⚡ Faster store performance</div>
+        <div class="benefit-card">🛡️ No code conflicts</div>
+        <div class="benefit-card">📈 Higher conversion rates</div>
+        <div class="benefit-card">🎯 Optimized app settings</div>
+        <div class="benefit-card">💰 Better ROI on app subscriptions</div>
+      </div>
+    </div>
 
-<a href="https://wa.me/923459016204">Contact Me</a>
-<a href="../services.html">⬅ Back</a>
+    <!-- Process Section - Step-by-step workflow -->
+    <div class="process-section">
+      <h2>📋 My App Integration Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Discovery Call</h4>
+          <p>Understand your business needs and recommend the best apps for your store.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>App Selection</h4>
+          <p>Choose the right apps based on functionality, pricing, and compatibility.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Installation & Setup</h4>
+          <p>Professional installation with proper configuration and testing.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Customization</h4>
+          <p>Match app design to your brand and optimize settings for maximum results.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Training & Handover</h4>
+          <p>Show you how to manage your apps and provide documentation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Apps Section - Additional value -->
+    <div style="background: #f8fafc; border-radius: 32px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
+      <h3 style="color: #0f2b3d; margin-bottom: 0.8rem;">🚀 Popular Apps I Integrate</h3>
+      <p style="color: #4b5563;">ReCharge · Bold Subscriptions · Judge.me · Yotpo · Loox · ReConvert · Zipify · Klaviyo · Gorgias · Tidio · Stripe · PayPal · Afterpay · Shop Pay · DSers · Oberlo · Printful · and 100+ more</p>
+    </div>
+
+    <!-- CTA Buttons (Original: Contact Me & Back) -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me on WhatsApp</a>
+      <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Email Me</a>
+    </div>
+
+    <div class="back-nav">
+      <a href="../services.html" class="btn-secondary">⬅ Back to Services</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — Professional App Integration Services</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
+  </div>
+</footer>
 
 </body>
 </html>
