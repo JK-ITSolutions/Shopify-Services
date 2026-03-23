@@ -1,38 +1,632 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shopify migration expert moving your store from WooCommerce, Wix, or other platforms to Shopify safely and efficiently.">
-
-<meta name="keywords" content="Shopify migration, WooCommerce to Shopify, Wix to Shopify, Shopify transfer expert">
-
-<meta name="author" content="Your Name">
-
-<meta property="og:title" content="Shopify Migration Expert">
-<meta property="og:description" content="Migrate your store to Shopify without data loss or downtime.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Shopify migration expert moving your store from WooCommerce, Wix, Magento, BigCommerce, or other platforms to Shopify safely and efficiently without data loss or downtime.">
+<meta name="keywords" content="Shopify migration, WooCommerce to Shopify, Wix to Shopify, Magento to Shopify, BigCommerce to Shopify, Shopify transfer expert, ecommerce migration">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yourdomain.com/services/migration.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Shopify Migration Expert | Move Your Store to Shopify Safely">
+<meta property="og:description" content="Migrate your store to Shopify without data loss or downtime. Expert migration from WooCommerce, Wix, Magento, and more.">
 <meta property="og:type" content="website">
-<title>Migration Services</title>
-<link rel="stylesheet" href="../css/style.css">
+<meta property="og:url" content="https://www.yourdomain.com/services/migration.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-migration.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Migration Expert | Safe & Seamless Platform Transfer">
+<meta name="twitter:description" content="Professional Shopify migration services with zero downtime and complete data preservation.">
+<title>Shopify Migration Expert | Move Your Store to Shopify Safely & Seamlessly</title>
+<!-- JSON-LD Structured Data for Advanced SEO & AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify Migration Services",
+  "description": "Professional Shopify migration services from WooCommerce, Wix, Magento, BigCommerce, and other platforms. Complete data transfer with zero downtime and SEO preservation.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "Platform Migration",
+  "offers": {
+    "@type": "Offer",
+    "description": "Safe and seamless ecommerce platform migration to Shopify"
+  }
+}
+</script>
+<!-- FAQ Schema for common migration questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does Shopify migration take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Migration timeline depends on store size and complexity. Small stores (under 500 products) typically take 3-7 days. Larger stores with custom features may take 1-3 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I lose my SEO rankings during migration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, I implement proper 301 redirects, preserve URL structures, and maintain meta data to ensure your SEO rankings remain intact throughout the migration process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data gets migrated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I migrate all essential data: products, collections, customer accounts, order history, blog posts, images, SEO metadata, and custom settings. No data is lost."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER SECTION ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* ===== MIGRATION SERVICES GRID ===== */
+.migration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+.migration-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  text-align: center;
+}
+.migration-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.migration-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.migration-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.migration-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.migration-tag {
+  display: inline-block;
+  background: #e6f0fa;
+  color: #1e4a6e;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+/* ===== PLATFORMS SECTION ===== */
+.platforms-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.platforms-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.platform-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.platform-item:hover {
+  background: #eef2ff;
+  transform: translateX(5px);
+}
+.platform-icon {
+  font-size: 1.6rem;
+}
+.platform-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+/* ===== BENEFITS SECTION ===== */
+.benefits-section {
+  background: linear-gradient(135deg, #1e4a6e 0%, #0f2b3d 100%);
+  border-radius: 40px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+.benefits-section h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.benefits-section > p {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+}
+.benefits-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.benefit-stat {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1.2rem 1.8rem;
+  border-radius: 32px;
+  min-width: 140px;
+}
+.benefit-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.benefit-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+/* ===== PROCESS SECTION ===== */
+.process-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.process-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+.step-number {
+  background: #2c7da0;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.step p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+/* ===== DATA MIGRATION SECTION ===== */
+.data-section {
+  background: #f8fafc;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.data-section h3 {
+  color: #0f2b3d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.data-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.data-badge {
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e4a6e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+/* ===== SEO SECTION ===== */
+.seo-section {
+  background: #fef9e6;
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  border-left: 5px solid #f5b042;
+  text-align: center;
+}
+.seo-section p {
+  color: #92400e;
+  font-weight: 500;
+}
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== BACK NAV ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .migration-grid {
+    gap: 1rem;
+  }
+  .platforms-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Shopify Migration Expert | Move Your Store to Shopify Safely</h1>
+<header class="page-header">
+  <div class="container">
+    <h1>🌍 Shopify Migration Expert | Move Your Store to Shopify Safely</h1>
+    <p>I help businesses migrate their stores to Shopify without data loss, downtime, or SEO damage. Switch to the world's leading ecommerce platform smoothly and securely.</p>
+  </div>
+</header>
 
-<h2>🌍 Migration Services</h2>
-<p>I help businesses migrate their stores to Shopify without data loss.</p>
+<main>
+  <div class="container">
+    <!-- Extended Migration Services Grid -->
+    <div class="migration-grid">
+      <div class="migration-card">
+        <div class="migration-icon">🛒</div>
+        <h3>WooCommerce to Shopify</h3>
+        <p>Complete migration of products, customers, orders, and content from WooCommerce to Shopify with preserved SEO rankings.</p>
+        <span class="migration-tag">Most popular migration</span>
+      </div>
+      <div class="migration-card">
+        <div class="migration-icon">🌐</div>
+        <h3>Wix to Shopify</h3>
+        <p>Seamless transition from Wix to Shopify with all your content, products, and blog posts transferred accurately.</p>
+        <span class="migration-tag">Enhanced features</span>
+      </div>
+      <div class="migration-card">
+        <div class="migration-icon">⚡</div>
+        <h3>Magento to Shopify</h3>
+        <p>Migrate complex Magento stores with custom attributes, customer data, and order history to Shopify efficiently.</p>
+        <span class="migration-tag">Complex migrations</span>
+      </div>
+      <div class="migration-card">
+        <div class="migration-icon">📦</div>
+        <h3>BigCommerce to Shopify</h3>
+        <p>Full data transfer from BigCommerce with product variants, customer accounts, and SEO preservation.</p>
+        <span class="migration-tag">Smooth transition</span>
+      </div>
+      <div class="migration-card">
+        <div class="migration-icon">📄</div>
+        <h3>Squarespace to Shopify</h3>
+        <p>Convert your Squarespace site to a fully functional Shopify store with ecommerce capabilities.</p>
+        <span class="migration-tag">Upgrade to ecommerce</span>
+      </div>
+      <div class="migration-card">
+        <div class="migration-icon">🔄</div>
+        <h3>Custom Platform Migration</h3>
+        <p>Migration from any custom-built platform, OpenCart, PrestaShop, or legacy systems to Shopify.</p>
+        <span class="migration-tag">Any platform supported</span>
+      </div>
+    </div>
 
-<h2>✅ Includes</h2>
-<ul>
-<li>WooCommerce to Shopify</li>
-<li>Wix to Shopify</li>
-<li>Data migration</li>
-</ul>
+    <!-- Platforms I Migrate From - Extended -->
+    <div class="platforms-section">
+      <h2>✅ Platforms I Migrate From</h2>
+      <div class="platforms-grid">
+        <div class="platform-item">
+          <div class="platform-icon">🛒</div>
+          <span>WooCommerce to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">🌐</div>
+          <span>Wix to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">⚡</div>
+          <span>Magento to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">📦</div>
+          <span>BigCommerce to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">📄</div>
+          <span>Squarespace to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">🔄</div>
+          <span>OpenCart to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">📊</div>
+          <span>PrestaShop to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">💻</div>
+          <span>Custom/HTML sites to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">📱</div>
+          <span>Ecwid to Shopify</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon">🎨</div>
+          <span>Weebly to Shopify</span>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Benefit</h2>
-<p>Switch to Shopify smoothly and securely.</p>
+    <!-- Benefits Section with Stats -->
+    <div class="benefits-section">
+      <h2>💡 Why Migrate to Shopify?</h2>
+      <p>Switch to Shopify smoothly and securely with zero downtime and complete data preservation.</p>
+      <div class="benefits-stats">
+        <div class="benefit-stat">
+          <div class="benefit-number">0%</div>
+          <div class="benefit-label">Data loss guarantee</div>
+        </div>
+        <div class="benefit-stat">
+          <div class="benefit-number">24/7</div>
+          <div class="benefit-label">No downtime during migration</div>
+        </div>
+        <div class="benefit-stat">
+          <div class="benefit-number">100%</div>
+          <div class="benefit-label">SEO preservation</div>
+        </div>
+        <div class="benefit-stat">
+          <div class="benefit-number">2-3x</div>
+          <div class="benefit-label">Faster store performance</div>
+        </div>
+      </div>
+    </div>
 
-<a href="https://wa.me/923459016204">Contact Me</a>
-<a href="../services.html">⬅ Back</a>
+    <!-- Migration Process Section -->
+    <div class="process-section">
+      <h2>📋 My Migration Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Audit & Assessment</h4>
+          <p>Review your current store, data structure, and requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Pre-Migration Setup</h4>
+          <p>Set up your new Shopify store and prepare for migration.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Data Export & Transfer</h4>
+          <p>Safely export and import all products, customers, and orders.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>SEO Preservation</h4>
+          <p>Set up 301 redirects and maintain URL structures.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Design & Setup</h4>
+          <p>Apply design, configure settings, and test functionality.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h4>Testing & Launch</h4>
+          <p>Thorough testing before going live with zero downtime.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Gets Migrated Section -->
+    <div class="data-section">
+      <h3>📦 Complete Data Migration Included</h3>
+      <div class="data-badges">
+        <span class="data-badge">Products & Variants</span>
+        <span class="data-badge">Product Images</span>
+        <span class="data-badge">Collections</span>
+        <span class="data-badge">Customer Accounts</span>
+        <span class="data-badge">Order History</span>
+        <span class="data-badge">Blog Posts</span>
+        <span class="data-badge">Pages & Content</span>
+        <span class="data-badge">SEO Metadata</span>
+        <span class="data-badge">URL Redirects</span>
+        <span class="data-badge">Reviews & Ratings</span>
+        <span class="data-badge">Discount Codes</span>
+        <span class="data-badge">Custom Fields</span>
+      </div>
+    </div>
+
+    <!-- SEO Preservation Section -->
+    <div class="seo-section">
+      <p>🔗 <strong>No SEO Rankings Lost:</strong> I implement proper 301 redirects, preserve URL structures, and maintain all meta data to ensure your search engine rankings remain intact throughout the migration process.</p>
+    </div>
+
+    <!-- Additional Value: Post-Migration Support -->
+    <div style="background: #f1f5f9; border-radius: 32px; padding: 1.2rem; margin: 2rem 0; text-align: center;">
+      <p style="color: #334155; font-size: 0.9rem;">🛡️ <strong>Post-Migration Support:</strong> I provide 30 days of post-migration support to ensure everything runs smoothly and answer any questions after your store is live on Shopify.</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Migration</a>
+      <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Get Free Migration Assessment</a>
+    </div>
+
+    <div class="back-nav">
+      <a href="../services.html" class="btn-secondary">⬅ Back to Services</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — Safe & Seamless Platform Migration</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
+  </div>
+</footer>
 
 </body>
 </html>
