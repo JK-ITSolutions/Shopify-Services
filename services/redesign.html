@@ -1,38 +1,630 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shopify store redesign expert improving UI, UX, speed, and conversions for underperforming Shopify stores.">
-
-<meta name="keywords" content="Shopify redesign, Shopify store improvement, Shopify UX optimization, Shopify performance upgrade">
-
-<meta name="author" content="Your Name">
-
-<meta property="og:title" content="Shopify Store Redesign Expert">
-<meta property="og:description" content="Transform your Shopify store into a high-converting sales machine.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Shopify store redesign expert improving UI, UX, speed, and conversions for underperforming Shopify stores. Transform your store into a high-converting sales machine.">
+<meta name="keywords" content="Shopify redesign, Shopify store improvement, Shopify UX optimization, Shopify performance upgrade, Shopify conversion optimization, store makeover">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yourdomain.com/services/redesign.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Shopify Store Redesign Expert | Transform Your Store Performance">
+<meta property="og:description" content="Transform your Shopify store into a high-converting sales machine with professional redesign, UI/UX improvements, and speed optimization.">
 <meta property="og:type" content="website">
-<title>Store Redesign</title>
-<link rel="stylesheet" href="../css/style.css">
+<meta property="og:url" content="https://www.yourdomain.com/services/redesign.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-redesign.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Store Redesign Expert | High-Converting Store Makeover">
+<meta name="twitter:description" content="Professional Shopify redesign services to boost conversions and improve user experience.">
+<title>Shopify Store Redesign Expert | Transform Your Store into a Sales Machine</title>
+<!-- JSON-LD Structured Data for Advanced SEO & AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify Store Redesign Services",
+  "description": "Complete Shopify store redesign services including UI/UX improvements, speed optimization, conversion optimization, and performance upgrades to transform underperforming stores.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "Store Redesign & Optimization",
+  "offers": {
+    "@type": "Offer",
+    "description": "Complete Shopify store makeover for better performance"
+  }
+}
+</script>
+<!-- FAQ Schema for common redesign questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should I consider redesigning my Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consider redesign if your conversion rate is below 2%, your site is slow, your brand has evolved, you're getting poor user feedback, or your design looks outdated compared to competitors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Shopify store redesign take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full redesign typically takes 2-4 weeks depending on store size and complexity. I provide regular updates and can work on a staging site to ensure zero downtime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will redesign affect my SEO and traffic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, I preserve all URL structures, meta data, and implement proper redirects to ensure your SEO rankings and traffic remain intact. The redesign will actually improve SEO through better structure and speed."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER SECTION ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* ===== REDESIGN SERVICES GRID ===== */
+.redesign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+.redesign-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  text-align: center;
+}
+.redesign-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.redesign-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.redesign-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.redesign-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.redesign-tag {
+  display: inline-block;
+  background: #e6f0fa;
+  color: #1e4a6e;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.services-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.services-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.service-item:hover {
+  background: #eef2ff;
+  transform: translateX(5px);
+}
+.service-icon {
+  font-size: 1.6rem;
+}
+.service-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+/* ===== IMPROVEMENTS SECTION ===== */
+.improvements-section {
+  background: linear-gradient(135deg, #1e4a6e 0%, #0f2b3d 100%);
+  border-radius: 40px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+.improvements-section h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.improvements-section > p {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+}
+.improvements-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.improvement-stat {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1.2rem 1.8rem;
+  border-radius: 32px;
+  min-width: 140px;
+}
+.improvement-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.improvement-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+/* ===== PROCESS SECTION ===== */
+.process-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.process-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+.step-number {
+  background: #2c7da0;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.step p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+/* ===== TRANSFORMATION SECTION ===== */
+.transformation-section {
+  background: #f8fafc;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.transformation-section h3 {
+  color: #0f2b3d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.transformation-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.transformation-badge {
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e4a6e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+/* ===== RESULT SECTION ===== */
+.result-section {
+  background: #fef9e6;
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  border-left: 5px solid #f5b042;
+  text-align: center;
+}
+.result-section p {
+  color: #92400e;
+  font-weight: 500;
+}
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== BACK NAV ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .redesign-grid {
+    gap: 1rem;
+  }
+  .services-grid-inner {
+    grid-template-columns: 1fr;
+  }
+  .improvements-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Shopify Store Redesign Expert | Improve Your Store Performance</h1>
+<header class="page-header">
+  <div class="container">
+    <h1>🔄 Shopify Store Redesign Expert | Transform Your Store Performance</h1>
+    <p>I redesign Shopify stores to improve performance, user experience, and conversions. Turn your existing store into a high-performing sales machine that drives results.</p>
+  </div>
+</header>
 
-<h2>🔄 Redesign & Optimization</h2>
-<p>I redesign Shopify stores to improve performance and conversions.</p>
+<main>
+  <div class="container">
+    <!-- Extended Redesign Services Grid -->
+    <div class="redesign-grid">
+      <div class="redesign-card">
+        <div class="redesign-icon">🎨</div>
+        <h3>UI/UX Improvements</h3>
+        <p>Modern, intuitive interface design that guides visitors through a seamless journey. I optimize navigation, visual hierarchy, and user flows for better engagement.</p>
+        <span class="redesign-tag">Better user experience</span>
+      </div>
+      <div class="redesign-card">
+        <div class="redesign-icon">⚡</div>
+        <h3>Speed Optimization</h3>
+        <p>Comprehensive performance audit and optimization. I improve load times, Core Web Vitals, and mobile responsiveness for faster, smoother experiences.</p>
+        <span class="redesign-tag">90+ PageSpeed scores</span>
+      </div>
+      <div class="redesign-card">
+        <div class="redesign-icon">📈</div>
+        <h3>Conversion Improvements</h3>
+        <p>Strategic CRO implementation, optimized product pages, checkout flow improvements, and persuasive design elements that increase sales.</p>
+        <span class="redesign-tag">Higher conversion rates</span>
+      </div>
+      <div class="redesign-card">
+        <div class="redesign-icon">🎯</div>
+        <h3>Modern Visual Design</h3>
+        <p>Fresh, contemporary aesthetics that reflect your brand identity and appeal to your target audience. Stand out from competitors.</p>
+        <span class="redesign-tag">Updated brand presence</span>
+      </div>
+      <div class="redesign-card">
+        <div class="redesign-icon">📱</div>
+        <h3>Mobile-First Approach</h3>
+        <p>Full mobile optimization ensuring your store looks and performs perfectly on smartphones and tablets where most customers shop.</p>
+        <span class="redesign-tag">70%+ mobile traffic ready</span>
+      </div>
+      <div class="redesign-card">
+        <div class="redesign-icon">🔍</div>
+        <h3>SEO & Structure Upgrade</h3>
+        <p>Improved site architecture, clean code, and SEO-friendly structure that helps search engines understand and rank your store better.</p>
+        <span class="redesign-tag">Better search visibility</span>
+      </div>
+    </div>
 
-<h2>✅ Includes</h2>
-<ul>
-<li>UI/UX improvements</li>
-<li>Speed optimization</li>
-<li>Conversion improvements</li>
-</ul>
+    <!-- Services Include Section - Extended -->
+    <div class="services-section">
+      <h2>✅ Complete Redesign & Optimization Package</h2>
+      <div class="services-grid-inner">
+        <div class="service-item">
+          <div class="service-icon">🎨</div>
+          <span>UI/UX improvements</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">⚡</div>
+          <span>Speed optimization</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📈</div>
+          <span>Conversion improvements</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🎯</div>
+          <span>Modern visual design</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📱</div>
+          <span>Mobile-first optimization</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔍</div>
+          <span>SEO structure upgrade</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🛒</div>
+          <span>Checkout flow improvement</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📊</div>
+          <span>Analytics setup & tracking</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔧</div>
+          <span>App optimization</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📋</div>
+          <span>Content & copy refresh</span>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Result</h2>
-<p>Turn your existing store into a high-performing sales machine.</p>
+    <!-- Improvements Section with Stats -->
+    <div class="improvements-section">
+      <h2>💡 What a Redesign Can Achieve</h2>
+      <p>Turn your existing store into a high-performing sales machine that drives real business results.</p>
+      <div class="improvements-stats">
+        <div class="improvement-stat">
+          <div class="improvement-number">20-50%</div>
+          <div class="improvement-label">Increase in conversion rate</div>
+        </div>
+        <div class="improvement-stat">
+          <div class="improvement-number">30-60%</div>
+          <div class="improvement-label">Faster page load times</div>
+        </div>
+        <div class="improvement-stat">
+          <div class="improvement-number">40%</div>
+          <div class="improvement-label">Better user engagement</div>
+        </div>
+        <div class="improvement-stat">
+          <div class="improvement-number">25%</div>
+          <div class="improvement-label">Higher average order value</div>
+        </div>
+      </div>
+    </div>
 
-<a href="https://wa.me/923459016204">Contact Me</a>
-<a href="../services.html">⬅ Back</a>
+    <!-- Redesign Process Section -->
+    <div class="process-section">
+      <h2>📋 My Redesign Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Store Audit & Analysis</h4>
+          <p>Comprehensive review of current store performance, UX issues, and opportunities.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Strategy & Planning</h4>
+          <p>Create redesign roadmap aligned with your business goals.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Design & Prototyping</h4>
+          <p>Create new designs and interactive prototypes for approval.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Development & Optimization</h4>
+          <p>Build the redesigned store with clean, optimized code.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Testing & Quality Assurance</h4>
+          <p>Thorough testing across devices and browsers.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h4>Launch & Handover</h4>
+          <p>Seamless launch with training and documentation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transformation Section -->
+    <div class="transformation-section">
+      <h3>✨ What Gets Transformed</h3>
+      <div class="transformation-badges">
+        <span class="transformation-badge">Homepage Layout</span>
+        <span class="transformation-badge">Product Pages</span>
+        <span class="transformation-badge">Collection Pages</span>
+        <span class="transformation-badge">Navigation & Menu</span>
+        <span class="transformation-badge">Checkout Flow</span>
+        <span class="transformation-badge">Mobile Experience</span>
+        <span class="transformation-badge">Page Speed</span>
+        <span class="transformation-badge">Brand Identity</span>
+        <span class="transformation-badge">Content Structure</span>
+        <span class="transformation-badge">Visual Assets</span>
+      </div>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-section">
+      <p>🚀 <strong>Turn Your Underperforming Store Into a High-Converting Sales Machine:</strong> Whether your store is outdated, slow, or not converting well, I transform it into a modern, fast, and profitable ecommerce business.</p>
+    </div>
+
+    <!-- Additional Value: Zero Downtime Guarantee -->
+    <div style="background: #f1f5f9; border-radius: 32px; padding: 1.2rem; margin: 2rem 0; text-align: center;">
+      <p style="color: #334155; font-size: 0.9rem;">🛡️ <strong>Zero Downtime Guarantee:</strong> I perform all redesign work on a staging site, so your live store remains fully operational. When the new design is ready, I switch over seamlessly with no interruption to your business.</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Redesign</a>
+      <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Get Free Store Audit</a>
+    </div>
+
+    <div class="back-nav">
+      <a href="../services.html" class="btn-secondary">⬅ Back to Services</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — Complete Store Redesign & Optimization</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
+  </div>
+</footer>
 
 </body>
 </html>
