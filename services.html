@@ -2,85 +2,405 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shopify Services</title>
-<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Shopify Services | Complete Ecommerce Solutions for Growth & Scale</title>
+<meta name="description" content="Comprehensive Shopify services: store setup, design, custom development, SEO, CRO, marketing, automation, migration, and more. Scale your business with expert solutions.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="keywords" content="Shopify services, Shopify expert, store setup, Shopify design, custom development, CRO, SEO, marketing, automation, dropshipping, migration">
+<link rel="canonical" href="https://www.yourdomain.com/services.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shopify Services | Complete Ecommerce Solutions">
+<meta property="og:description" content="Professional Shopify services to build, optimize, and scale your online store. Expert solutions for every stage of growth.">
+<meta property="og:url" content="https://www.yourdomain.com/services.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-services.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Services | Complete Ecommerce Solutions">
+<meta name="twitter:description" content="Expert Shopify services from setup to advanced automation. Drive sales with proven strategies.">
+<!-- JSON-LD Structured Data for AI & Advanced SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Shopify Services",
+  "description": "Complete list of professional Shopify services offered by an expert freelancer.",
+  "numberOfItems": 13,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Store Setup & Launch",
+      "description": "Full Shopify store setup with premium themes, product uploads, and payment configuration.",
+      "url": "services/setup.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Design & UX Optimization",
+      "description": "High-converting store design, mobile-first UX, and user journey optimization.",
+      "url": "services/design.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom Development",
+      "description": "Custom liquid code, app development, and advanced Shopify functionalities.",
+      "url": "services/development.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Conversion Optimization",
+      "description": "CRO audits, A/B testing, checkout optimization, and sales funnel improvements.",
+      "url": "services/cro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "SEO Services",
+      "description": "Technical SEO, keyword strategy, link building, and structured data implementation.",
+      "url": "services/seo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Marketing & Ads",
+      "description": "Google Ads, Facebook Ads, TikTok Ads, and retargeting campaign management.",
+      "url": "services/marketing.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Automation & AI",
+      "description": "Klaviyo flows, AI chatbots, automated email sequences, and workflow automation.",
+      "url": "services/automation.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Dropshipping Setup",
+      "description": "Oberlo/DSers integration, supplier sourcing, and automated order fulfillment.",
+      "url": "services/dropshipping.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Store Redesign",
+      "description": "Complete store makeover with modern design, improved navigation, and brand alignment.",
+      "url": "services/redesign.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "App Integration",
+      "description": "Seamless integration of essential apps for reviews, subscriptions, loyalty, and more.",
+      "url": "services/apps.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Migration Services",
+      "description": "Migrate from WooCommerce, Magento, BigCommerce, or other platforms with zero data loss.",
+      "url": "services/migration.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Product Optimization",
+      "description": "Product page optimization, high-quality descriptions, SEO-friendly content, and visual enhancements.",
+      "url": "services/product.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Maintenance & Support",
+      "description": "Ongoing store maintenance, security updates, backups, and priority support.",
+      "url": "services/support.html"
+    }
+  ]
+}
+</script>
+<!-- Additional Service Schema for overall business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Shopify Services",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "description": "End-to-end Shopify services including setup, design, development, marketing, and optimization."
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER STYLES ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #334155;
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* ===== SERVICES GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+/* ===== CARD STYLES ===== */
+.card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #0f2b3d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1.2rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+.card-link:hover {
+  background: #1f5e7e;
+  transform: translateX(4px);
+}
+/* ===== BACK BUTTON ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.8rem;
+  border-radius: 60px;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.back-link:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .services-grid {
+    gap: 1.2rem;
+  }
+  .card {
+    padding: 1.3rem;
+  }
+  .card h3 {
+    font-size: 1.3rem;
+  }
+}
+</style>
 </head>
-
 <body>
 
-<h1>🛒 Shopify Services</h1>
-<p>Complete solutions to build, optimize & scale your Shopify business</p>
-
-<div class="container">
-
-  <div class="card">
-    <h3>Store Setup & Launch</h3>
-    <a href="services/setup.html">View Details</a>
+<header class="page-header">
+  <div class="container">
+    <h1>🛒 Shopify Services</h1>
+    <p>Complete solutions to build, optimize & scale your Shopify business — from startup to enterprise level.</p>
   </div>
+</header>
 
-  <div class="card">
-    <h3>Design & UX Optimization</h3>
-    <a href="services/design.html">View Details</a>
+<main>
+  <div class="container">
+    <div class="services-grid">
+      <!-- Store Setup & Launch -->
+      <div class="card">
+        <h3>📦 Store Setup & Launch</h3>
+        <p>Full store configuration: theme installation, product uploads, payment gateways, shipping settings, and legal pages. Get your store live in days, not weeks.</p>
+        <a href="services/setup.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Design & UX Optimization -->
+      <div class="card">
+        <h3>🎨 Design & UX Optimization</h3>
+        <p>Mobile-first, conversion-focused designs. Custom branding, intuitive navigation, and user experience testing to boost engagement and sales.</p>
+        <a href="services/design.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Custom Development -->
+      <div class="card">
+        <h3>⚙️ Custom Development</h3>
+        <p>Advanced Liquid coding, custom sections, app integrations, and headless Shopify solutions. Tailored functionality to fit unique business needs.</p>
+        <a href="services/development.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Conversion Optimization -->
+      <div class="card">
+        <h3>📈 Conversion Optimization</h3>
+        <p>A/B testing, heatmaps, checkout optimization, and sales funnel analysis. Increase average order value (AOV) and reduce cart abandonment.</p>
+        <a href="services/cro.html" class="card-link">View Details →</a>
+      </div>
+      <!-- SEO Services -->
+      <div class="card">
+        <h3>🔍 SEO Services</h3>
+        <p>Technical SEO, keyword research, on-page optimization, link building, and structured data (JSON-LD). Dominate search results and drive organic traffic.</p>
+        <a href="services/seo.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Marketing & Ads -->
+      <div class="card">
+        <h3>📢 Marketing & Ads</h3>
+        <p>Google Ads, Meta Ads, TikTok, and Pinterest campaigns. Full-funnel strategy, retargeting, and ROI-focused ad management.</p>
+        <a href="services/marketing.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Automation & AI -->
+      <div class="card">
+        <h3>🤖 Automation & AI</h3>
+        <p>Klaviyo email flows, AI-powered chatbots, automated workflows, and personalized recommendations. Save time and increase customer lifetime value.</p>
+        <a href="services/automation.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Dropshipping Setup -->
+      <div class="card">
+        <h3>📦 Dropshipping Setup</h3>
+        <p>End-to-end dropshipping store setup with Oberlo, DSers, or Spocket. Supplier integration, product sourcing, and automated order fulfillment.</p>
+        <a href="services/dropshipping.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Store Redesign -->
+      <div class="card">
+        <h3>🔄 Store Redesign</h3>
+        <p>Complete visual overhaul, improved navigation, modern aesthetics, and enhanced user experience. Rebrand and revitalize your existing store.</p>
+        <a href="services/redesign.html" class="card-link">View Details →</a>
+      </div>
+      <!-- App Integration -->
+      <div class="card">
+        <h3>📱 App Integration</h3>
+        <p>Seamless integration of best-in-class apps: reviews, subscriptions, loyalty programs, wishlists, and more. Optimize functionality without code bloat.</p>
+        <a href="services/apps.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Migration Services -->
+      <div class="card">
+        <h3>🚚 Migration Services</h3>
+        <p>Smooth migration from WooCommerce, Magento, BigCommerce, or custom platforms. Zero data loss, preserved SEO rankings, and minimal downtime.</p>
+        <a href="services/migration.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Product Optimization -->
+      <div class="card">
+        <h3>✨ Product Optimization</h3>
+        <p>High-converting product pages, SEO-optimized descriptions, professional photography, and variant management. Maximize product visibility and sales.</p>
+        <a href="services/product.html" class="card-link">View Details →</a>
+      </div>
+      <!-- Maintenance & Support -->
+      <div class="card">
+        <h3>🛠️ Maintenance & Support</h3>
+        <p>Ongoing store updates, security patches, backup monitoring, performance optimization, and priority support. Keep your store running flawlessly.</p>
+        <a href="services/support.html" class="card-link">View Details →</a>
+      </div>
+    </div>
+
+    <div class="back-nav">
+      <a href="index.html" class="back-link">⬅ Back to Home</a>
+    </div>
   </div>
+</main>
 
-  <div class="card">
-    <h3>Custom Development</h3>
-    <a href="services/development.html">View Details</a>
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — All services tailored for growth & scale.</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
   </div>
-
-  <div class="card">
-    <h3>Conversion Optimization</h3>
-    <a href="services/cro.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>SEO Services</h3>
-    <a href="services/seo.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Marketing & Ads</h3>
-    <a href="services/marketing.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Automation & AI</h3>
-    <a href="services/automation.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Dropshipping Setup</h3>
-    <a href="services/dropshipping.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Store Redesign</h3>
-    <a href="services/redesign.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>App Integration</h3>
-    <a href="services/apps.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Migration Services</h3>
-    <a href="services/migration.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Product Optimization</h3>
-    <a href="services/product.html">View Details</a>
-  </div>
-
-  <div class="card">
-    <h3>Maintenance & Support</h3>
-    <a href="services/support.html">View Details</a>
-  </div>
-
-</div>
-
-<a href="index.html">⬅ Back</a>
+</footer>
 
 </body>
 </html>
