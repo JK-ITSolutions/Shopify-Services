@@ -1,53 +1,634 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Expert Shopify developer offering custom development, Liquid coding, API integration, and advanced Shopify features.">
-
-<meta name="keywords" content="Shopify developer, Shopify development, Shopify Liquid expert, Shopify customization, Shopify coding">
-
-<meta name="author" content="Your Name">
-
-<meta property="og:title" content="Shopify Development Expert">
-<meta property="og:description" content="Get custom Shopify development solutions tailored to your business needs.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Expert Shopify developer offering custom development, Liquid coding, API integration, and advanced Shopify features. Tailored solutions to make your store stand out.">
+<meta name="keywords" content="Shopify developer, Shopify development, Shopify Liquid expert, Shopify customization, Shopify coding, custom Shopify features, Shopify API integration, headless Shopify">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yourdomain.com/services/development.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Shopify Development Expert | Custom Shopify Development Services">
+<meta property="og:description" content="Get custom Shopify development solutions tailored to your business needs. Liquid coding, API integrations, custom features, and more.">
 <meta property="og:type" content="website">
-<title>Shopify Development</title>
-<link rel="stylesheet" href="../css/style.css">
+<meta property="og:url" content="https://www.yourdomain.com/services/development.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-development.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Developer | Custom Shopify Development">
+<meta name="twitter:description" content="Professional Shopify development services including Liquid coding, custom features, and API integrations.">
+<title>Shopify Developer | Custom Shopify Development Services & Liquid Coding Expert</title>
+<!-- JSON-LD Structured Data for Advanced SEO & AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify Development Services",
+  "description": "Expert Shopify development including Liquid coding, custom features, API integrations, theme customization, and performance optimization.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "Custom Development",
+  "offers": {
+    "@type": "Offer",
+    "description": "Tailored Shopify development solutions for unique business needs"
+  }
+}
+</script>
+<!-- FAQ Schema for common development questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Liquid coding in Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Liquid is Shopify's template language used to create dynamic content, custom sections, and advanced functionality. I specialize in Liquid development to create unique store experiences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you build custom Shopify features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, I build custom features, sections, and functionalities tailored to your specific business requirements that aren't available with standard themes or apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with Shopify API integrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. I integrate third-party systems, custom apps, and external platforms using Shopify's REST and GraphQL APIs."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER SECTION ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* ===== DEVELOPMENT SERVICES GRID ===== */
+.dev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+.dev-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  text-align: center;
+}
+.dev-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.dev-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.dev-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.dev-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.dev-tag {
+  display: inline-block;
+  background: #e6f0fa;
+  color: #1e4a6e;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+/* ===== OFFER SECTION ===== */
+.offer-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.offer-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.offer-item:hover {
+  background: #eef2ff;
+  transform: translateX(5px);
+}
+.offer-icon {
+  font-size: 1.6rem;
+}
+.offer-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+/* ===== TECH STACK SECTION ===== */
+.tech-section {
+  background: linear-gradient(135deg, #1e4a6e 0%, #0f2b3d 100%);
+  border-radius: 40px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+.tech-section h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.tech-section > p {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+}
+.tech-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.tech-stat {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1.2rem 1.8rem;
+  border-radius: 32px;
+  min-width: 140px;
+}
+.tech-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.tech-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+/* ===== PROCESS SECTION ===== */
+.process-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.process-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+.step-number {
+  background: #2c7da0;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.step p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+/* ===== TECHNOLOGIES SECTION ===== */
+.technologies-section {
+  background: #f8fafc;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.technologies-section h3 {
+  color: #0f2b3d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.tech-badge {
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e4a6e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+/* ===== BENEFITS SECTION ===== */
+.benefits-section {
+  background: #fef9e6;
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  border-left: 5px solid #f5b042;
+  text-align: center;
+}
+.benefits-section p {
+  color: #92400e;
+  font-weight: 500;
+}
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== BACK NAV ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .dev-grid {
+    gap: 1rem;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Shopify Developer | Custom Shopify Development Services</h1>
+<header class="page-header">
+  <div class="container">
+    <h1>⚙️ Shopify Developer | Custom Shopify Development Services</h1>
+    <p>As an experienced Shopify developer, I create custom solutions tailored to your business needs. From Liquid coding to API integrations, I make your store stand out.</p>
+  </div>
+</header>
 
-<h2>⚙️ Advanced Shopify Development</h2>
-<p>As an experienced Shopify developer, I create custom solutions tailored to your business needs.</p>
+<main>
+  <div class="container">
+    <!-- Extended Development Services Grid -->
+    <div class="dev-grid">
+      <div class="dev-card">
+        <div class="dev-icon">💧</div>
+        <h3>Liquid Coding & Customization</h3>
+        <p>Expert Liquid development for custom sections, dynamic content, and advanced theme modifications. Complete control over your store's functionality.</p>
+        <span class="dev-tag">Full Liquid mastery</span>
+      </div>
+      <div class="dev-card">
+        <div class="dev-icon">🛠️</div>
+        <h3>Custom Features & Sections</h3>
+        <p>Build unique features that don't exist in standard themes. Custom sections, bespoke functionality, and tailored user experiences.</p>
+        <span class="dev-tag">Tailored solutions</span>
+      </div>
+      <div class="dev-card">
+        <div class="dev-icon">🔌</div>
+        <h3>API Integrations</h3>
+        <p>REST & GraphQL API expertise. Connect your store with third-party systems, custom apps, ERPs, and external platforms seamlessly.</p>
+        <span class="dev-tag">Seamless connections</span>
+      </div>
+      <div class="dev-card">
+        <div class="dev-icon">⚡</div>
+        <h3>Speed & Performance Optimization</h3>
+        <p>Advanced code optimization, lazy loading, and performance tuning. Achieve 90+ PageSpeed scores and faster load times.</p>
+        <span class="dev-tag">Faster conversions</span>
+      </div>
+      <div class="dev-card">
+        <div class="dev-icon">🎨</div>
+        <h3>Theme Customization</h3>
+        <p>Customize any theme to match your exact requirements. From minor tweaks to complete theme overhauls.</p>
+        <span class="dev-tag">Perfectly tailored</span>
+      </div>
+      <div class="dev-card">
+        <div class="dev-icon">🏗️</div>
+        <h3>Headless Shopify</h3>
+        <p>Build headless Shopify stores with React, Next.js, or Hydrogen for ultimate flexibility and performance.</p>
+        <span class="dev-tag">Modern architecture</span>
+      </div>
+    </div>
 
-<h2>✅ What I Offer</h2>
-<ul>
-<li>Liquid coding customization</li>
-<li>Custom features & sections</li>
-<li>API integrations</li>
-<li>Speed optimization</li>
-</ul>
+    <!-- What I Offer Section - Extended -->
+    <div class="offer-section">
+      <h2>✅ What I Offer</h2>
+      <div class="offer-grid">
+        <div class="offer-item">
+          <div class="offer-icon">💧</div>
+          <span>Liquid coding customization</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🛠️</div>
+          <span>Custom features & sections</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🔌</div>
+          <span>API integrations (REST & GraphQL)</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">⚡</div>
+          <span>Speed optimization & Core Web Vitals</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🎨</div>
+          <span>Theme customization & development</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🏗️</div>
+          <span>Headless Shopify development</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🔄</div>
+          <span>Third-party app integrations</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">📱</div>
+          <span>Mobile optimization</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">🔧</div>
+          <span>Bug fixes & troubleshooting</span>
+        </div>
+        <div class="offer-item">
+          <div class="offer-icon">📦</div>
+          <span>Custom checkout extensions</span>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Benefits</h2>
-<p>Custom Shopify development allows your store to stand out and function exactly how you need.</p><h1>Shopify Developer | Custom Shopify Development Services</h1>
+    <!-- Technical Expertise Section with Stats -->
+    <div class="tech-section">
+      <h2>💡 Custom Development Benefits</h2>
+      <p>Custom Shopify development allows your store to stand out and function exactly how you need — no compromises.</p>
+      <div class="tech-stats">
+        <div class="tech-stat">
+          <div class="tech-number">100%</div>
+          <div class="tech-label">Tailored to your needs</div>
+        </div>
+        <div class="tech-stat">
+          <div class="tech-number">2-3x</div>
+          <div class="tech-label">Faster than app workarounds</div>
+        </div>
+        <div class="tech-stat">
+          <div class="tech-number">No limits</div>
+          <div class="tech-label">Complete creative freedom</div>
+        </div>
+        <div class="tech-stat">
+          <div class="tech-number">Future-proof</div>
+          <div class="tech-label">Scalable codebase</div>
+        </div>
+      </div>
+    </div>
 
-<h2>⚙️ Advanced Shopify Development</h2>
-<p>As an experienced Shopify developer, I create custom solutions tailored to your business needs.</p>
+    <!-- Development Process Section -->
+    <div class="process-section">
+      <h2>📋 My Development Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Requirements Analysis</h4>
+          <p>Understand your goals and technical requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Technical Planning</h4>
+          <p>Architecture design and development roadmap.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Development</h4>
+          <p>Clean, documented code with best practices.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Testing</h4>
+          <p>Rigorous testing across devices and scenarios.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Deployment</h4>
+          <p>Smooth launch with zero downtime.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h4>Support & Maintenance</h4>
+          <p>Ongoing support and updates as needed.</p>
+        </div>
+      </div>
+    </div>
 
-<h2>✅ What I Offer</h2>
-<ul>
-<li>Liquid coding customization</li>
-<li>Custom features & sections</li>
-<li>API integrations</li>
-<li>Speed optimization</li>
-</ul>
+    <!-- Technologies & Tools Section -->
+    <div class="technologies-section">
+      <h3>🛠️ Technologies I Work With</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Liquid</span>
+        <span class="tech-badge">HTML5/CSS3</span>
+        <span class="tech-badge">JavaScript/ES6+</span>
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">Hydrogen</span>
+        <span class="tech-badge">GraphQL</span>
+        <span class="tech-badge">REST API</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">Shopify CLI</span>
+        <span class="tech-badge">Git/GitHub</span>
+        <span class="tech-badge">Webpack</span>
+        <span class="tech-badge">Tailwind CSS</span>
+        <span class="tech-badge">SASS/SCSS</span>
+      </div>
+    </div>
 
-<h2>💡 Benefits</h2>
-<p>Custom Shopify development allows your store to stand out and function exactly how you need.</p>
+    <!-- Custom Development Benefits Section -->
+    <div class="benefits-section">
+      <p>💎 "Custom development gives you complete control over your store's functionality. No app limitations, no compromises — just exactly what your business needs."</p>
+    </div>
 
-<a href="https://wa.me/9234590162204">Contact Me</a>
-<a href="../services.html">⬅ Back</a>
+    <!-- Additional Value: Project Types -->
+    <div style="background: #f1f5f9; border-radius: 32px; padding: 1.2rem; margin: 2rem 0; text-align: center;">
+      <p style="color: #334155; font-size: 0.9rem;">📦 Common projects: Custom product builders · Subscription portals · Loyalty systems · Custom checkout · Wholesale solutions · Multi-vendor setups · Complex calculators · Interactive features</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Development</a>
+      <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Discuss Your Project</a>
+    </div>
+
+    <div class="back-nav">
+      <a href="../services.html" class="btn-secondary">⬅ Back to Services</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — Custom Shopify Development & Liquid Coding</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
+  </div>
+</footer>
 
 </body>
 </html>
