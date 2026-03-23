@@ -1,39 +1,630 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shopify marketing expert offering Facebook Ads, Google Ads, and sales funnel strategies to grow your Shopify store.">
-
-<meta name="keywords" content="Shopify marketing, Shopify ads expert, Facebook ads Shopify, Google ads Shopify, Shopify growth">
-
-<meta name="author" content="Your Name">
-
-<meta property="og:title" content="Shopify Marketing Expert">
-<meta property="og:description" content="Drive traffic and increase sales with Shopify marketing and paid ads strategies.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Shopify marketing expert offering Facebook Ads, Google Ads, and sales funnel strategies to grow your Shopify store. Drive traffic, increase sales, and maximize ROI.">
+<meta name="keywords" content="Shopify marketing, Shopify ads expert, Facebook ads Shopify, Google ads Shopify, Shopify growth, retargeting strategies, sales funnels, paid advertising">
+<meta name="author" content="Shopify Expert Freelancer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yourdomain.com/services/marketing.html">
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Shopify Marketing Expert | Drive Traffic & Increase Sales">
+<meta property="og:description" content="Drive traffic and increase sales with Shopify marketing and paid ads strategies. Facebook, Google, TikTok, and retargeting campaigns.">
 <meta property="og:type" content="website">
-<title>Shopify Marketing</title>
-<link rel="stylesheet" href="../css/style.css">
+<meta property="og:url" content="https://www.yourdomain.com/services/marketing.html">
+<meta property="og:image" content="https://www.yourdomain.com/og-marketing.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Marketing Expert | Paid Ads & Growth Strategies">
+<meta name="twitter:description" content="Professional Shopify marketing services to drive traffic and increase conversions.">
+<title>Shopify Marketing Expert | Drive Traffic & Increase Sales with Paid Ads</title>
+<!-- JSON-LD Structured Data for Advanced SEO & AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify Marketing & Advertising Services",
+  "description": "Professional Shopify marketing services including Facebook Ads, Google Ads, TikTok campaigns, retargeting strategies, and sales funnel optimization to drive traffic and increase sales.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Shopify Expert Freelancer",
+    "url": "https://www.yourdomain.com/"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "Digital Marketing",
+  "offers": {
+    "@type": "Offer",
+    "description": "Data-driven marketing campaigns for Shopify stores"
+  }
+}
+</script>
+<!-- FAQ Schema for common marketing questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which ad platform works best for Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your product and audience. Facebook/Instagram ads work great for visual products and broad audiences. Google Ads capture high-intent buyers searching for products. I recommend a multi-platform approach based on your goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good ROAS for Shopify ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A healthy ROAS (Return on Ad Spend) is typically 3x or higher, meaning $3 in revenue for every $1 spent. I aim for sustainable, profitable campaigns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you manage ongoing ad campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, I offer ongoing ad management and optimization services to ensure consistent performance and scaling."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f9fafc;
+  color: #111827;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ===== HEADER SECTION ===== */
+.page-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+.page-header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* ===== MARKETING SERVICES GRID ===== */
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+.marketing-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  text-align: center;
+}
+.marketing-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -12px rgba(44,125,160,0.2);
+}
+.marketing-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.marketing-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.marketing-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.marketing-tag {
+  display: inline-block;
+  background: #e6f0fa;
+  color: #1e4a6e;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.services-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.services-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.service-item:hover {
+  background: #eef2ff;
+  transform: translateX(5px);
+}
+.service-icon {
+  font-size: 1.6rem;
+}
+.service-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+/* ===== ROI SECTION ===== */
+.roi-section {
+  background: linear-gradient(135deg, #1e4a6e 0%, #0f2b3d 100%);
+  border-radius: 40px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+.roi-section h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.roi-section > p {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+}
+.roi-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.roi-stat {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1.2rem 1.8rem;
+  border-radius: 32px;
+  min-width: 140px;
+}
+.roi-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.roi-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+/* ===== FUNNEL SECTION ===== */
+.funnel-section {
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eef2f6;
+}
+.funnel-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-align: center;
+}
+.funnel-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+.step-number {
+  background: #2c7da0;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: #0f2b3d;
+}
+.step p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+/* ===== AD PLATFORMS SECTION ===== */
+.platforms-section {
+  background: #f8fafc;
+  border-radius: 40px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.platforms-section h3 {
+  color: #0f2b3d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.platform-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.platform-badge {
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e4a6e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+/* ===== RESULT SECTION ===== */
+.result-section {
+  background: #fef9e6;
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  border-left: 5px solid #f5b042;
+  text-align: center;
+}
+.result-section p {
+  color: #92400e;
+  font-weight: 500;
+}
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #1e4a6e;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+/* ===== BACK NAV ===== */
+.back-nav {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a2540;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+  .marketing-grid {
+    gap: 1rem;
+  }
+  .services-grid-inner {
+    grid-template-columns: 1fr;
+  }
+  .roi-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .funnel-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Shopify Marketing Expert | Drive Traffic & Increase Sales</h1>
+<header class="page-header">
+  <div class="container">
+    <h1>📣 Shopify Marketing Expert | Drive Traffic & Increase Sales</h1>
+    <p>I help Shopify stores grow with targeted marketing strategies and paid ads campaigns. From Facebook to Google, I deliver traffic that converts.</p>
+  </div>
+</header>
 
-<h2>📣 Shopify Ads & Marketing</h2>
-<p>I help Shopify stores grow with targeted marketing strategies and paid ads campaigns.</p>
+<main>
+  <div class="container">
+    <!-- Extended Marketing Services Grid -->
+    <div class="marketing-grid">
+      <div class="marketing-card">
+        <div class="marketing-icon">📘</div>
+        <h3>Facebook & Instagram Ads</h3>
+        <p>Advanced audience targeting, creative ad design, and retargeting campaigns that drive conversions. I manage budgets from $500 to $50,000+ monthly.</p>
+        <span class="marketing-tag">ROI-focused campaigns</span>
+      </div>
+      <div class="marketing-card">
+        <div class="marketing-icon">🔍</div>
+        <h3>Google Ads Campaigns</h3>
+        <p>Shopping ads, search ads, and display campaigns that capture high-intent buyers actively searching for your products.</p>
+        <span class="marketing-tag">High purchase intent</span>
+      </div>
+      <div class="marketing-card">
+        <div class="marketing-icon">🎯</div>
+        <h3>Retargeting Strategies</h3>
+        <p>Recover lost sales with strategic retargeting across Facebook, Google, and email. Turn window shoppers into paying customers.</p>
+        <span class="marketing-tag">Up to 30% recovery</span>
+      </div>
+      <div class="marketing-card">
+        <div class="marketing-icon">🌊</div>
+        <h3>Sales Funnels</h3>
+        <p>Build high-converting funnels from cold traffic to repeat customers. Optimized landing pages, upsells, and email sequences.</p>
+        <span class="marketing-tag">Scalable revenue systems</span>
+      </div>
+      <div class="marketing-card">
+        <div class="marketing-icon">📱</div>
+        <h3>TikTok & Influencer Marketing</h3>
+        <p>Viral ad strategies and influencer partnerships to reach younger audiences and generate organic growth.</p>
+        <span class="marketing-tag">Trend-driven reach</span>
+      </div>
+      <div class="marketing-card">
+        <div class="marketing-icon">📊</div>
+        <h3>Analytics & Reporting</h3>
+        <p>Data-driven insights, custom dashboards, and transparent reporting to track ROAS, CPA, and overall campaign performance.</p>
+        <span class="marketing-tag">Full transparency</span>
+      </div>
+    </div>
 
-<h2>✅ Services</h2>
-<ul>
-<li>Facebook & Instagram ads</li>
-<li>Google Ads campaigns</li>
-<li>Retargeting strategies</li>
-<li>Sales funnels</li>
-</ul>
+    <!-- Services Include Section - Extended -->
+    <div class="services-section">
+      <h2>✅ Complete Marketing Services</h2>
+      <div class="services-grid-inner">
+        <div class="service-item">
+          <div class="service-icon">📘</div>
+          <span>Facebook & Instagram ads</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔍</div>
+          <span>Google Ads campaigns (Shopping/Search)</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🎯</div>
+          <span>Retargeting strategies</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🌊</div>
+          <span>Sales funnels & landing pages</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📱</div>
+          <span>TikTok & Pinterest ads</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📧</div>
+          <span>Email marketing & flows</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📊</div>
+          <span>Analytics & ROI tracking</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🎨</div>
+          <span>Ad creative & copywriting</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔄</div>
+          <span>A/B testing & optimization</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">📈</div>
+          <span>Scaling strategies</span>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Result</h2>
-<p>Get more traffic, leads, and conversions for your Shopify store.</p>
+    <!-- ROI Results Section -->
+    <div class="roi-section">
+      <h2>💡 Results You Can Expect</h2>
+      <p>Get more traffic, leads, and conversions for your Shopify store with proven marketing strategies.</p>
+      <div class="roi-stats">
+        <div class="roi-stat">
+          <div class="roi-number">3-5x</div>
+          <div class="roi-label">Average ROAS</div>
+        </div>
+        <div class="roi-stat">
+          <div class="roi-number">30%+</div>
+          <div class="roi-label">Increase in conversions</div>
+        </div>
+        <div class="roi-stat">
+          <div class="roi-number">25%</div>
+          <div class="roi-label">Lower CPA with optimization</div>
+        </div>
+        <div class="roi-stat">
+          <div class="roi-number">24/7</div>
+          <div class="roi-label">Automated campaign management</div>
+        </div>
+      </div>
+    </div>
 
-<a href="https://wa.me/923459016204">Contact Me</a>
-<a href="../services.html">⬅ Back</a>
+    <!-- Sales Funnel Section -->
+    <div class="funnel-section">
+      <h2>📋 My Sales Funnel Strategy</h2>
+      <div class="funnel-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Audience Research</h4>
+          <p>Identify your ideal customers and their pain points.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Traffic Generation</h4>
+          <p>Drive qualified traffic through targeted ads.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Landing Page Optimization</h4>
+          <p>Convert visitors with compelling offers and design.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Retargeting Campaigns</h4>
+          <p>Capture lost leads and bring them back.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h4>Email & SMS Automation</h4>
+          <p>Nurture leads and drive repeat purchases.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h4>Scale & Optimize</h4>
+          <p>Double down on what works for maximum ROI.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad Platforms Section -->
+    <div class="platforms-section">
+      <h3>🎯 Ad Platforms I Specialize In</h3>
+      <div class="platform-badges">
+        <span class="platform-badge">Facebook Ads</span>
+        <span class="platform-badge">Instagram Ads</span>
+        <span class="platform-badge">Google Shopping</span>
+        <span class="platform-badge">Google Search</span>
+        <span class="platform-badge">TikTok Ads</span>
+        <span class="platform-badge">Pinterest Ads</span>
+        <span class="platform-badge">LinkedIn Ads (B2B)</span>
+        <span class="platform-badge">YouTube Ads</span>
+        <span class="platform-badge">Snapchat Ads</span>
+        <span class="platform-badge">Microsoft Advertising</span>
+      </div>
+    </div>
+
+    <!-- Result Section - Extended -->
+    <div class="result-section">
+      <p>🚀 <strong>Get More Traffic, Leads & Conversions:</strong> My data-driven approach ensures every dollar spent delivers measurable results. Whether you're launching or scaling, I have a strategy for you.</p>
+    </div>
+
+    <!-- Additional Value: Budget Flexibility -->
+    <div style="background: #f1f5f9; border-radius: 32px; padding: 1.2rem; margin: 2rem 0; text-align: center;">
+      <p style="color: #334155; font-size: 0.9rem;">💰 <strong>Flexible Budgets:</strong> I work with stores at any stage — from $500/month testing budgets to $50,000/month scaling campaigns. Every campaign is optimized for maximum return.</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Marketing</a>
+      <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Get Free Audit & Strategy</a>
+    </div>
+
+    <div class="back-nav">
+      <a href="../services.html" class="btn-secondary">⬅ Back to Services</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Shopify Expert Freelancer — Data-Driven Marketing & Paid Ads</p>
+    <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
+  </div>
+</footer>
 
 </body>
 </html>
