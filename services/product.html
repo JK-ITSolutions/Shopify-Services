@@ -424,6 +424,134 @@ body {
     align-items: center;
   }
 }
+
+/* ===== NEW PRICING SECTION STYLES (added without altering existing) ===== */
+.pricing-section {
+  margin: 2.5rem 0 2rem;
+}
+.pricing-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+.pricing-subhead {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0 2rem;
+}
+.pricing-card {
+  background: white;
+  border-radius: 32px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -10px rgba(44,125,160,0.2);
+}
+.pricing-card .plan-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f2b3d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.pricing-card .plan-price {
+  text-align: center;
+  margin: 0.8rem 0 1rem;
+}
+.price-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2c7da0;
+  letter-spacing: -0.02em;
+}
+.price-period {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.pricing-features {
+  list-style: none;
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+  flex-grow: 1;
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 0;
+  color: #334155;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed #edf2f7;
+}
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+.pricing-features .check-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  color: #2c7da0;
+}
+.pricing-card .btn-pricing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.pricing-card .btn-pricing:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+}
+.pricing-contact-extra {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+.pricing-contact-extra .btn-primary {
+  background: #1e4a6e;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+}
+.pricing-contact-extra .btn-primary:hover {
+  background: #0f3a55;
+}
+@media (max-width: 640px) {
+  .pricing-grid {
+    gap: 1.2rem;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+  }
+  .price-amount {
+    font-size: 1.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -602,7 +730,72 @@ body {
       <p style="color: #334155; font-size: 0.9rem;">✅ <strong>Everything Covered:</strong> Theme issues · App conflicts · Code errors · Speed problems · Security concerns · Backup management · Monthly health audits · And more.</p>
     </div>
 
-    <!-- CTA Buttons -->
+    <!-- ===== NEW: PRICING SECTION WITH 3 MAINTENANCE PACKAGES + EXTRA CONTACT BUTTON ===== -->
+    <div class="pricing-section">
+      <h2>💰 Maintenance Plans – Keep Your Store Running Perfectly</h2>
+      <div class="pricing-subhead">Monthly retainer • Proactive care • Priority support</div>
+      <div class="pricing-grid">
+        <!-- Package 1: Essential Care -->
+        <div class="pricing-card">
+          <div class="plan-name">🛡️ Essential Care</div>
+          <div class="plan-price">
+            <span class="price-amount">$99</span>
+            <span class="price-period"> / month</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Monthly security & performance check</li>
+            <li><span class="check-icon">✅</span> Bug fixes & minor adjustments</li>
+            <li><span class="check-icon">✅</span> Theme & app updates</li>
+            <li><span class="check-icon">✅</span> Weekly backups</li>
+            <li><span class="check-icon">✅</span> Email support (24h response)</li>
+            <li><span class="check-icon">✅</span> Monthly health report</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Essential%20Care%20maintenance%20plan%20(%2499/month).%20Let's%20keep%20my%20store%20running%20smoothly!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+        <!-- Package 2: Pro Care -->
+        <div class="pricing-card">
+          <div class="plan-name">⚡ Pro Care</div>
+          <div class="plan-price">
+            <span class="price-amount">$199</span>
+            <span class="price-period"> / month</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Bi-weekly performance optimization</li>
+            <li><span class="check-icon">✅</span> Priority bug fixes (48h turnaround)</li>
+            <li><span class="check-icon">✅</span> Speed optimization & Core Web Vitals</li>
+            <li><span class="check-icon">✅</span> Daily backups & security monitoring</li>
+            <li><span class="check-icon">✅</span> Priority email support (12h response)</li>
+            <li><span class="check-icon">✅</span> Monthly strategy call</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Pro%20Care%20maintenance%20plan%20(%24199/month).%20I%20need%20reliable%20ongoing%20support!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+        <!-- Package 3: Enterprise Care -->
+        <div class="pricing-card">
+          <div class="plan-name">🏢 Enterprise Care</div>
+          <div class="plan-price">
+            <span class="price-amount">$399</span>
+            <span class="price-period"> / month</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Unlimited bug fixes & updates</li>
+            <li><span class="check-icon">✅</span> 24/7 performance & security monitoring</li>
+            <li><span class="check-icon">✅</span> Advanced speed optimization & CWV</li>
+            <li><span class="check-icon">✅</span> Hourly backups & disaster recovery</li>
+            <li><span class="check-icon">✅</span> Emergency support (4h response)</li>
+            <li><span class="check-icon">✅</span> Dedicated account manager</li>
+            <li><span class="check-icon">✅</span> Monthly strategic planning & reporting</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Enterprise%20Care%20maintenance%20plan%20(%24399/month).%20I%20need%20comprehensive%20store%20support!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+      </div>
+      <!-- extra contact button inside pricing section as requested -->
+      <div class="pricing-contact-extra">
+        <a href="https://wa.me/923459016204" class="btn-primary">💬 Need a custom maintenance plan? Contact me directly</a>
+      </div>
+    </div>
+    <!-- ===== END PRICING SECTION ===== -->
+
+    <!-- Original CTA Buttons -->
     <div class="cta-buttons">
       <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Support</a>
       <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Request Maintenance Quote</a>
