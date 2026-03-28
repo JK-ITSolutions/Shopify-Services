@@ -419,6 +419,134 @@ body {
     align-items: center;
   }
 }
+
+/* ===== NEW PRICING SECTION STYLES (added without altering existing) ===== */
+.pricing-section {
+  margin: 2.5rem 0 2rem;
+}
+.pricing-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+.pricing-subhead {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0 2rem;
+}
+.pricing-card {
+  background: white;
+  border-radius: 32px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border-color: #2c7da0;
+  box-shadow: 0 20px 30px -10px rgba(44,125,160,0.2);
+}
+.pricing-card .plan-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f2b3d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.pricing-card .plan-price {
+  text-align: center;
+  margin: 0.8rem 0 1rem;
+}
+.price-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2c7da0;
+  letter-spacing: -0.02em;
+}
+.price-period {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.pricing-features {
+  list-style: none;
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+  flex-grow: 1;
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 0;
+  color: #334155;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed #edf2f7;
+}
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+.pricing-features .check-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  color: #2c7da0;
+}
+.pricing-card .btn-pricing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #2c7da0;
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.pricing-card .btn-pricing:hover {
+  background: #1f5e7e;
+  transform: translateY(-2px);
+}
+.pricing-contact-extra {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+.pricing-contact-extra .btn-primary {
+  background: #1e4a6e;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+}
+.pricing-contact-extra .btn-primary:hover {
+  background: #0f3a55;
+}
+@media (max-width: 640px) {
+  .pricing-grid {
+    gap: 1.2rem;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+  }
+  .price-amount {
+    font-size: 1.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -611,7 +739,71 @@ body {
       <p style="color: #334155; font-size: 0.9rem;">📦 Common projects: Custom product builders · Subscription portals · Loyalty systems · Custom checkout · Wholesale solutions · Multi-vendor setups · Complex calculators · Interactive features</p>
     </div>
 
-    <!-- CTA Buttons -->
+    <!-- ===== NEW: PRICING SECTION WITH 3 DEVELOPMENT PACKAGES + EXTRA CONTACT BUTTON ===== -->
+    <div class="pricing-section">
+      <h2>💰 Development Investment – Custom Solutions, Fair Pricing</h2>
+      <div class="pricing-subhead">One-time development fee • Clean, documented code • Long-term scalability</div>
+      <div class="pricing-grid">
+        <!-- Package 1: Dev Starter -->
+        <div class="pricing-card">
+          <div class="plan-name">⚙️ Dev Starter</div>
+          <div class="plan-price">
+            <span class="price-amount">$299</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Theme customization (up to 5 pages)</li>
+            <li><span class="check-icon">✅</span> Liquid code modifications & fixes</li>
+            <li><span class="check-icon">✅</span> 2 custom sections (metafields ready)</li>
+            <li><span class="check-icon">✅</span> Basic speed optimization</li>
+            <li><span class="check-icon">✅</span> 7-day bug fix support</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Dev%20Starter%20package%20(%24299).%20Let's%20customize%20my%20store!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+        <!-- Package 2: Dev Pro -->
+        <div class="pricing-card">
+          <div class="plan-name">🚀 Dev Pro</div>
+          <div class="plan-price">
+            <span class="price-amount">$599</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Full custom feature development</li>
+            <li><span class="check-icon">✅</span> Up to 8 custom sections/modules</li>
+            <li><span class="check-icon">✅</span> API integration (1 third-party service)</li>
+            <li><span class="check-icon">✅</span> Advanced performance optimization</li>
+            <li><span class="check-icon">✅</span> Custom functionality with Liquid/JS</li>
+            <li><span class="check-icon">✅</span> 14-day priority support</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Dev%20Pro%20package%20(%24599).%20I%20need%20advanced%20custom%20features!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+        <!-- Package 3: Dev Enterprise -->
+        <div class="pricing-card">
+          <div class="plan-name">🏭 Dev Enterprise</div>
+          <div class="plan-price">
+            <span class="price-amount">$1,199</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✅</span> Complete custom development project</li>
+            <li><span class="check-icon">✅</span> Unlimited custom features & sections</li>
+            <li><span class="check-icon">✅</span> Complex API integrations (multiple systems)</li>
+            <li><span class="check-icon">✅</span> Headless Shopify setup (optional)</li>
+            <li><span class="check-icon">✅</span> Custom checkout extensions</li>
+            <li><span class="check-icon">✅</span> Full code documentation & training</li>
+            <li><span class="check-icon">✅</span> 30-day enterprise support</li>
+          </ul>
+          <a href="https://wa.me/923459016204?text=Hi%2C%20I'm%20interested%20in%20the%20Dev%20Enterprise%20package%20(%241199).%20Let's%20build%20something%20truly%20unique!" class="btn-pricing">📞 Select Package →</a>
+        </div>
+      </div>
+      <!-- extra contact button inside pricing section as requested -->
+      <div class="pricing-contact-extra">
+        <a href="https://wa.me/923459016204" class="btn-primary">💬 Need a custom development quote? Contact me directly</a>
+      </div>
+    </div>
+    <!-- ===== END PRICING SECTION ===== -->
+
+    <!-- Original CTA Buttons -->
     <div class="cta-buttons">
       <a href="https://wa.me/923459016204" class="btn-primary">💬 Contact Me for Development</a>
       <a href="mailto:jehangir4life@gmail.com" class="btn-primary" style="background: #1e4a6e;">✉️ Discuss Your Project</a>
