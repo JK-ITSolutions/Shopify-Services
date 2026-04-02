@@ -530,10 +530,204 @@ body {
     font-size: 1.8rem;
   }
 }
+/* ===== PREMIUM NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 37, 64, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 24px;
+  flex-wrap: wrap;
+}
+
+/* Brand */
+.navbar-brand a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.brand-icon {
+  font-size: 1.6rem;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+.brand-text {
+  background: linear-gradient(135deg, #fff, #ffb347);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.navbar-brand a:hover {
+  opacity: 0.9;
+}
+
+/* Hamburger menu (custom animated icon) */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Menu list */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation on hover */
+.navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff9900, #ffb347);
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover::after,
+.navbar-menu li a.active::after {
+  width: 100%;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(10, 37, 64, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    margin-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    gap: 0;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-menu li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .navbar-menu li a::after {
+    display: none;
+  }
+
+  .navbar-menu li a:hover,
+  .navbar-menu li a.active {
+    background: rgba(255, 153, 0, 0.2);
+    color: #ff9900;
+  }
+
+  /* Hamburger animation when menu is open */
+  .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -8px);
+  }
+
+  .menu-toggle:checked ~ .navbar-menu {
+    display: flex;
+  }
+}
 </style>
 </head>
 <body>
 
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a href="../index.html">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Shopify Expert</span>
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="navbar-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><a href="../index.html#why">Why Partner</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 <header class="page-header">
   <div class="container">
     <h1>🤖 Shopify Automation Expert | Save Time & Scale Faster with AI</h1>
@@ -774,7 +968,7 @@ body {
 
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Shopify Expert Freelancer — AI-Powered Automation Solutions</p>
+    <p>© 2026 Shopify Expert Freelancer — AI-Powered Automation Solutions</p>
     <p>⚡ Mobile optimized · Core Web Vitals ready · AI-friendly structured data</p>
   </div>
 </footer>
