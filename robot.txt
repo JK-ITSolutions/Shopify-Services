@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jk-itsolutions.github.io/Shopify-Services/sitemap.xml
+
+# Optional: Specify crawler delay if needed
+# Crawl-delay: 1
